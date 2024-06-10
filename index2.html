@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="inedx2.css">
+<title>Milliomos leszek 2</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('pénz2.png'); /* Use the correct path to your image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color: rgb(255, 255, 255); /* Ensure the text is visible against the background */
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-bar li {
+        margin-right: 20px;
+    }
+
+    .nav-bar li:last-child {
+        margin-right: 0;
+    }
+
+    .nav-bar a {
+        color: rgb(149, 18, 182); /* Ensure the text is visible against the background */
+        text-decoration: none;
+    }
+
+    #loginBtn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-color: #8324b7;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #registerBtn {
+        position: absolute;
+        top: 10px;
+        right: 120px; /* Adjust to position correctly */
+        background-color: #8324b7;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #loginForm {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: rgba(138, 0, 231, 0.765);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #registerForm {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: rgba(138, 0, 231, 0.765);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .tab-content {
+        border: 2px solid rgb(0, 0, 0);
+        background-color: rgba(255, 145, 0, 0.114); /* Semi-transparent background for readability */
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Bitcoin vétel</h1>
+    <button id="loginBtn">Belépés</button>
+    <button id="registerBtn">Regisztráció</button>
+</header>
+
+<div class="nav-bar">
+    <ul>
+        <li><a href="#home" class="tab-link">Főoldal</a></li>
+        <li><a href="#work" class="tab-link">Munka Díj</a></li>
+        <li><a href="#quality" class="tab-link">Minőség</a></li>
+        <li><a href="#faq" class="tab-link">Kérdések</a></li>
+        <li><a href="#szeretet" id="szeretetTab" class="tab-link" style="display: none;">Szeretet</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div id="home" class="tab-content active">
+        <p>Itt vehetsz Bitcoint</p>
+    </div>
+
+    <div id="work" class="tab-content">
+        <table border="1">
+            <tr>
+                <th>Darabszám</th>
+                <th>1 DB </th>
+                <th>2 DB</th>
+                <th>3 DB</th>
+                <th>4 DB</th>
+            </tr>
+            <tr>
+                <td>Ár</td>
+                <td>Ár</td>
+                <td>Ár</td>
+                <td>Ár</td>
+                <td>Ár</td>
+            </tr>
+            <tr>
+                <td>Ár</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+                <td>Row 2, Cell 4</td>
+                <td>Row 2, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Ár</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+                <td>Row 3, Cell 4</td>
+                <td>Row 3, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Ár</td>
+                <td>1000000Ft </td>
+                <td>Row 4, Cell 3</td>
+                <td>Row 4, Cell 4</td>
+                <td>Row 4, Cell 5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="quality" class="tab-content">
+        <p>Számunkra minőség a fontos</p>
+    </div>
+
+    <div id="faq" class="tab-content">
+        <p>Kérdéssel a <a href="mailto:szalontaicsanad2008@gamil.com"></a>-ot keressék</p>
+        <p>Remélem tetszett ez a weboldal</p>
+    </div>
+
+    <div id="szeretet" class="tab-content" style="display: none;">
+        <p>Szeretettel üdvözöljük!</p>
+    </div>
+</div>
+
+<div id="loginForm">
+    <form id="login">
+        <label for="username">Felhasználónév:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Jelszó:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Bejelentkezés">
+    </form>
+</div>
+
+<div id="registerForm" style="display:none;">
+    <form id="register">
+        <label for="newUsername">Új felhasználónév:</label>
+        <input type="text" id="newUsername" name="newUsername"><br><br>
+        <label for="newPassword">Új jelszó:</label>
+        <input type="password" id="newPassword" name="newPassword"><br><br>
+        <label for="confirmPassword">Jelszó megerősítése:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+        <input type="submit" value="Regisztráció">
+    </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var tabLinks = document.querySelectorAll('.tab-link');
+    var tabContents = document.querySelectorAll('.tab-content');
+    var loginBtn = document.getElementById('loginBtn');
+    var loginForm = document.getElementById('loginForm');
+    var registerBtn = document.getElementById('registerBtn');
+    var registerForm = document.getElementById('registerForm');
+    var szeretetTab = document.getElementById('szeretetTab');
+    var szeretetContent = document.getElementById('szeretet');
+
+    // Check login state
+    if (localStorage.getItem('loggedIn') === 'true') {
+        loginBtn.style.display = 'none';
+        registerBtn.style.display = 'none';
+        szeretetTab.style.display = 'block';
+        szeretetContent.style.display = 'block';
+        tabContents.forEach(function(content) {
+            content.classList.remove('active');
+            content.style.display = 'none';
+        });
+        szeretetContent.classList.add('active');
+        szeretetContent.style.display = 'block';
+    }
+
+    tabLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute('href').substr(1);
+            tabContents.forEach(function(content) {
+                if (content.id === targetId) {
+                    content.classList.add('active');
+                    content.style.display = 'block';
+                } else {
+                    content.classList.remove('active');
+                    content.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    loginBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        loginForm.style.display = loginForm.style.display === 'block' ? 'none' : 'block';
+        registerForm.style.display = 'none';
+    });
+
+    registerBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        registerForm.style.display = registerForm.style.display === 'block' ? 'none' : 'block';
+        loginForm.style.display = 'none';
+    });
+
+    document.getElementById('login').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Simulate login validation logic
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === 'admin' && password === 'admin') { // Replace with your validation logic
+            localStorage.setItem('loggedIn', 'true');
+            
+            // Hide login form and login button
+            loginForm.style.display = 'none';
+            loginBtn.style.display = 'none';
+            registerBtn.style.display = 'none';
+
+            // Show the "Szeretet" tab
+            szeretetTab.style.display = 'block';
+            szeretetContent.style.display = 'block';
+
+            // Switch to the "Szeretet" tab
+            tabContents.forEach(function(content) {
+                content.classList.remove('active');
+                content.style.display = 'none';
+            });
+            szeretetContent.classList.add('active');
+            szeretetContent.style.display = 'block';
+        } else {
+            alert('Érvénytelen felhasználónév vagy jelszó');
+        }
+    });
+
+    document.getElementById('register').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Simulate registration logic
+        var newUsername = document.getElementById('newUsername').value;
+        var newPassword = document.getElementById('newPassword').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (newPassword === confirmPassword) {
+            // Save new user data (for demo purposes we just alert the user)
+            alert('Sikeres regisztráció!');
+            registerForm.style.display = 'none';
+        } else {
+            alert('A jelszavak nem egyeznek!');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
